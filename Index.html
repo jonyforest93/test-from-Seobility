@@ -6,7 +6,26 @@
     <title>test work</title>
 </head>
 <body>
-    <h1>Hello, i am test work =)</h1>
+    <form class="form" method="POST" action="#">
+        <h1>I am form</h1>
+        <div class="input_box">
+            <label class="form__label" for="name">Name*</label>
+            <input class="form__input" id="name" type="text" name="name" placeholder="enter your name">
+        </div>
+        <div class="input_box">
+            <label class="form__label" for="email">Email*</label>
+            <input class="form__input" id="email" type="email" name="email" placeholder="enter your email">
+        </div>
+        <div class="input_box">
+            <label class="form__label" for="phone">Phone*</label>
+            <input class="form__input" id="phone" type="text" name="phone">
+        </div>
+        <div class="input_box">
+            <label class="form__label" for="message">Message</label>
+            <textarea class="form__input" name="message" id="message" cols="30" rows="10" placeholder="enter message"></textarea>
+        </div>
+        <button class="btn btn-submit">Send</button>
+    </form>
     <script src="dist/bundle.js"></script>
 </body>
 </html>
