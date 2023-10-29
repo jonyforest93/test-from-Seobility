@@ -1,7 +1,151 @@
-$bg-color: orange;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-body {
-    background: $bg-color;
+.hidden {
+    display: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.scale-modal {
+    transform: translate(-50%, -50%) scale(1) !important;
+}
+
+.error-res,
+.succsess-res {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    background-color: rgba(111,111,111,0.1);
+}
+
+.btn {
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.btn-open-modal {
+    position: fixed;
+    top:50px;
+    left: 100px;
+    background: #7F56D9;
+    border: 1px solid #7F56D9;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.3);
+    width: 700px;
+    background: white;
+    border: 1px solid #D0D5DD;
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 2;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out;
+
+    .modal-content {
+        position: relative;
+        min-height: 200px;
+        
+        .btn-close-modal {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+            background: transparent;
+            border: 1px solid #D0D5DD;
+            color: #344054;
+        }
+    }
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    max-width: 550px;
+    margin: 50px auto;
+    padding: 48px 16px;
+
+    * {
+        outline: none;
+    }
+
+    .input_box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+        margin-bottom: 30px;
+
+        .form__label {
+            margin-bottom: 6px;
+        }
+
+        .form__input {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #D0D5DD;
+            border-radius: 8px;
+        }
+
+        .form__input:focus {
+            box-shadow: 0 0 5px #7F56D9;
+        }
+
+        ._err {
+            box-shadow: 0 0 5px #f00606; 
+        }
+
+        .error-message {
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            color: #f00606;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    }
+    
+    .btn-submit {
+        width: 100%;
+        background: #7F56D9;
+        border: 1px solid #7F56D9;
+    }
 }
 
 

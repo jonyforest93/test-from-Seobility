@@ -6,7 +6,44 @@
     <title>test work</title>
 </head>
 <body>
-    <h1>Hello, i am test work =)</h1>
+    <div class="error-res hidden">
+        <p class="error-res__text"></p>
+    </div>
+    <div class="succsess-res hidden">
+        <p class="succsess-res__text"></p>
+    </div>
+    <button class="btn btn-open-modal">Open modal</button>
+    <div class="modal hidden" id="modal">
+        <div class="modal-content">
+            <button class="btn btn-close-modal">&times;</button>
+            <p>Some text</p>
+        </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <form class="form" method="POST" action="#">
+        <h1>I am form</h1>
+        <div class="input_box">
+            <label class="form__label" for="name">Name*</label>
+            <input class="form__input _req" id="name" type="text" name="name" placeholder="enter your name">
+            <p class="error-message hidden">Incorrect value</p>
+        </div>
+        <div class="input_box">
+            <label class="form__label" for="email">Email*</label>
+            <input class="form__input _req _email" id="email" type="email" name="email" placeholder="enter your email">
+            <p class="error-message hidden">Incorrect email</p>
+        </div>
+        <div class="input_box">
+            <label class="form__label" for="phone">Phone*</label>
+            <input class="form__input _req _phone" id="phone" type="text" name="phone">
+            <p class="error-message hidden">Incorrect phone</p>
+        </div>
+        <div class="input_box">
+            <label class="form__label" for="message">Message</label>
+            <textarea class="form__input _req" name="message" id="message" cols="20" rows="5" placeholder="enter message"></textarea>
+            <p class="error-message hidden">Incorrect value</p>
+        </div>
+        <button class="btn btn-submit">Send</button>
+    </form>
     <script src="dist/bundle.js"></script>
 </body>
 </html>
