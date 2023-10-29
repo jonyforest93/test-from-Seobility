@@ -40,3 +40,19 @@ $base-font: 'Roboto';
     line-height: 24px;
     color: #667085;
 }
+
+.error-res__text {
+    font-family: $base-font;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+    color: #f00606;
+}
+
+.succsess-res__text {
+    font-family: $base-font;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+    color: #065508;
+}

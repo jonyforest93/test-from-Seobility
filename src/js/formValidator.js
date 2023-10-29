@@ -1,5 +1,6 @@
 import Inputmask from "inputmask";
 import Rules from "./validateServices";
+import submitForm from "./submitForm";
 
 const validateRules = new Rules();
 
@@ -35,15 +36,18 @@ document.addEventListener("DOMContentLoaded", function () {
         return error;
     };
 
-    const formSend = (e) => {
+    form.addEventListener("submit", async (e) => {
         e.preventDefault();
-
         const error = validatedForm(form);
 
         if (error === 0) {
-            const formData = new FormData(form);
+            const formData = {
+                name: form.querySelector("#name").value,
+                email: form.querySelector("#email").value,
+                phone: form.querySelector("#phone").value,
+                message: form.querySelector("#message").value,
+            };
+            await submitForm(formData, form);
         }
-    };
-
-    form.addEventListener("submit", formSend);
+    });
 });
