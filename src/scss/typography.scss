@@ -30,6 +30,13 @@ $base-font: 'Roboto';
             font-weight: 500;
             font-size: 16px;
             line-height: 24px;
-            color: #ffffff;
         }
+}
+
+.modal {
+    font-family: $base-font;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #667085;
 }
